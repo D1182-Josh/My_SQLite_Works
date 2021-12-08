@@ -38,6 +38,10 @@
 	SELECT * 
 	FROM invoices 
 	WHERE total>10;
+
+	SELECT * 
+	FROM invoices 
+	WHERE total>10;
 	
 
 	
