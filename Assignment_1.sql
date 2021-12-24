@@ -16,4 +16,45 @@
 SOLUTİON*/
 
 
-
+-- 1
+SELECT InvoiceId,CustomerId,total
+FROM invoices
+ORDER by CustomerId DESC;
+---------------------------
+SELECT InvoiceId,CustomerId,total
+FROM invoices
+ORDER by total DESC;
+-- 2
+SELECT InvoiceId,CustomerId,total
+FROM invoices
+ORDER by total DESC;
+-----------------------------
+SELECT InvoiceId,CustomerId,total
+FROM invoices
+ORDER by CustomerId ASC;
+-- 3
+/* When we use ASC sorted in CustomerId column it shows the results lowest to highest. 
+In the other hand when we use DESC it works opposite of ASC that shows results highest to lowest.*/
+ -- 4
+ SELECT *
+ FROM invoices
+ WHERE total >= 10
+ LIMIT 10;
+ 
+ -- 5
+ SELECT *
+ FROM invoices
+ WHERE total < 10
+ LIMIT 5;
+ 
+ -- 6
+ SELECT name
+ FROM tracks
+ WHERE name like "B%s";
+ 
+ -- 7
+ SELECT *
+ FROM invoices
+ WHERE BillingCountry in("Germany","USA","Norway","Canada")
+ AND InvoiceDate like "2010%"
+ ORDER BY InvoiceDate DESC;
